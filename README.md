@@ -21,16 +21,24 @@ Conectar pequenas empresas e empreendedores que enfrentam desafios em sua rotina
 - Edição e exclusão
 - Sessões
  ### 🔐 Segurança Implementada
+- Senhas criptografadas com password_hash() e verificadas com password_verify()
+- Controle de sessão com $_SESSION
+- Proteção contra acesso direto a rotas restritas
+- Validação de dados no front-end e no back-end
+- Sanitização básica de entradas para evitar SQL Injection
 
-* **#Senhas criptografadas com password_hash() e verificadas com password_verify()**
+## 🧠 Organização do Projeto
+- Separação de responsabilidades entre front-end e back-end
+- Conexão com banco centralizada
+- Estrutura preparada para futura implementação completa de MVC
+- Código versionado com Git
 
-* **#Controle de sessão com $_SESSION**
-
-* **#Proteção contra acesso direto a rotas restritas**
-
-* **#Validação de dados no front-end e no back-end**
-
-* **#Sanitização básica de entradas para evitar SQL Injection**
+## 📚 Principais Aprendizados
+- Implementação de autenticação segura
+- Estruturação de banco de dados relacional
+- Gerenciamento de sessões
+- Organização de código para escalabilidade
+- Planejamento de evolução futura com MVC e AJAX
 
 ## 🗄️ Modelagem de Banco
 Imagem ou explicação das tabelas.
