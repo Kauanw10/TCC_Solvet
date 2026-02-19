@@ -20,6 +20,17 @@ Conectar pequenas empresas e empreendedores que enfrentam desafios em sua rotina
 - Sistema de curtidas
 - Edição e exclusão
 - Sessões
+ ### 🔐 Segurança Implementada
+
+* **#Senhas criptografadas com password_hash() e verificadas com password_verify()**
+
+* **#Controle de sessão com $_SESSION**
+
+* **#Proteção contra acesso direto a rotas restritas**
+
+* **#Validação de dados no front-end e no back-end**
+
+* **#Sanitização básica de entradas para evitar SQL Injection**
 
 ## 🗄️ Modelagem de Banco
 Imagem ou explicação das tabelas.
