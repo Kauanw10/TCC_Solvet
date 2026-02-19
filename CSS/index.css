@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header{
+    justify-content: center;
+    display: flex;
+}
+nav{
+    background-color: rgb(29, 129, 129);
+    padding: 60px;
+}
+#logo-site{
+    margin-top: 20px;
+    width: 25%;
+}
+/* Formatação do titulo */
+.format-title{
+.gfs-didot-regular {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    color: #212A3E;
+    display: flex;
+    
+}
+/* Estilização do titulo */
+.title{
+    font-family: "GFS Didot", serif;
+    text-align: center;
+    font-size: 40px;
+    width: 45%;
+}
+/* formatação do button */
+.format-button{
+    justify-content: center;
+    margin-top: 60px;
+    display: flex;
+}
+/* estilização do button */
+#button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    background-color: #9C27B0;
+    border-radius: 10px;
+    padding: 20px 55px;
+    cursor: pointer;
+    color: white;
+    margin: 20px;
+}
+/* animação do button */
+#button:hover{
+    background-color: white;
+    transition: 0.7s;
+    color: rgb(153, 9, 110);   
+}
+/* formatação da img-capa */
+.format-img{
+    justify-content: center;
+    display: flex;
+}
+/* estilização da img-capa */
+#img-capa{
+    border-radius:30px;
+    margin-top: 70px;
+    width: 90%;
+}
+
+/* estilo do texto abaixo de "PILARES" */
+p{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+/* formatação das colunas-pilares */
+.format-column{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 70px;
+    margin-top: 50px;
+    color: #212A3E;
+    display: flex;
+    width: 100%;
+    gap: 85px;
+}
+/* Estilização dos textos-pilares e sua formatalização */
+#text-us{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #424242;
+    font-size: medium;
+}
+#text-basetech{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #424242;
+    font-size: medium;
+}
+#text-rewards{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #424242;
+    font-size: medium;
+}
+/* estilização dos pilares */
+.piller1{
+    width: 15%;
+}
+#us-image{
+    margin-top: 30px;
+    width:100%;
+}
+.piller2{
+    width: 15%;
+}
+#basetech-image{
+    margin-top: 30px;
+    width:100%;
+}
+.piller3{
+    width: 15%;
+}
+#rewards-image{
+    margin-top: 30px;
+    width:100%;
+}
+/* formatação da historia da empresa */
+.format-history{
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+}
+/* estilização das colunas */
+.column1{
+    justify-content: center;
+    font-size:20px;
+    display: flex;
+    width: 130%;
+    gap: 5%;
+}
+.content1{
+    text-align: justify;
+    color: #424242;
+    font-size: 105%;
+    width: 25%;
+}
+#p1{
+    justify-content: center;
+    border-radius: 30px;
+    display: flex;
+    width: 30%;
+}
+.column2{
+    flex-direction: row-reverse;
+    justify-content: center;
+    font-size:20px;
+    display: flex;
+    width: 100%;
+    gap: 5%;
+}
+.content2{
+    text-align: justify;
+    color: #424242;
+    font-size: 105%;
+    width:25%;
+}
+#p2{
+    justify-content: center;
+    border-radius: 30px;
+    display: flex;
+    width: 30%;
+}
+.column3{
+    justify-content: center;
+    font-size:20px;
+    display: flex;
+    width: 100%;
+    gap: 75px;
+}
+.content3{
+    text-align: justify;
+    font-size: 105%;
+    color: #424242;
+    width: 25%;
+}
+#p3{
+    
+    justify-content: center;
+    border-radius: 30px;
+    display: flex;
+    width:  30%;
+    height: 40vh;
+}
+
+/* formatação da coluna-marketing */
+.format-marketing{
+    justify-content: center;
+    margin-bottom: 70px;
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+}
+.side1{
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-left: 45px;
+    font-size:35px;
+    display: flex;
+    width: 100%;
+    gap: 40px;
+}
+.marketing{
+    justify-content: center;
+    display: flex;
+    width: 25%;
+}
+#p4{
+
+    justify-content: center;
+    border-radius: 30px;
+    display: flex;
+    width: 25%;
+}
+/* formatação do destaque */
+.format-emphasis{
+ 
+    background-color: #e6f5f7;
+    justify-content: center;
+    display:flex;
+  
+}
+/* estilização do destaque */
+.content-emphasis{
+    font-family: Segoe;
+    margin-top: 120px;
+    color: #212A3E;
+    font-size: 40px;
+    display: grid;
+    width: 35%;
+}
+.format-image{
+    justify-content: center;
+    display: flex;
+}
+#img-citacao{
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: 55px;
+    margin-top: 45px;
+    display: flex;
+    height:70%;
+    width: 30%;
+}
+#cit{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content:center;
+    margin-bottom: 100px;
+    font-size: 25px;
+    display: flex;
+}
+
+footer{
+
+    justify-content: left;
+    margin-bottom: 100px;
+    margin-left: 300px;
+    margin-top: 30px;
+    display: grid;
+}
+#title-footer{
+    justify-content: left;
+    margin-top: 70px;
+    color: #212A3E;
+    font-size: 35px;
+    display: flex;
+}
+#cont1-footer{
+    margin-top: 10px;
+    color: #212A3E;
+    width: 90%;
+}
+#cont2-footer{
+    margin-top: 100px;
+    color: #212A3E;
+    font-size: 15px;
+    width: 80%;
+}
+@media(max-width:768px){
+    #logo-site{
+        width: 80%;
+    }
+    .title{
+        font-size: x-large;
+        width: 80%;
+    }
+    #button{
+        padding: 15px 25px;
+    }
+    .format-button{
+        width: 100%;
+    }
+    .format-column{
+        flex-direction:column;
+        width: 100%;
+    }
+    .piller1{
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+    }
+    .text-us{
+        justify-content: center;
+        display: flex;
+    }
+    #us-image{
+        margin-left: 70px;
+        width: 70%;
+    }
+    .piller2{
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+    }
+    .text-basetech{
+        justify-content: center;
+        display: flex;
+    }
+    #basetech-image{
+        margin-left: 70px;
+        width: 70%;
+    }
+    .piller3{
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+    }
+    .text-rewards{
+        justify-content: center;
+        display: flex;
+    }
+    #rewards-image{
+        margin-left: 70px;
+        width: 70%;
+    }
+    /* formata coluna 1 */
+    .column1{
+        flex-direction: column;
+        margin-left: 50px;
+    }
+    .content1{
+        justify-content: center;
+        display: flex;
+        width:90%;
+    }
+    #p1{
+        justify-content:center;
+        display: flex;
+        width: 90%;
+    }
+/* formata coluna 2 */
+    .column2{
+        flex-direction: column;
+        margin-left: 50px;
+    }
+    #p2{
+        justify-content:center;
+        display: flex;
+        width: 90%;
+    }
+    .content2{   
+        justify-content: center;
+        display: flex;
+        width:90%;
+    }
+/* formata coluna 3 */
+    .column3{
+        flex-direction: column;
+        margin-left: 50px;
+    }
+/* aqui! display none para esconder 3-foto */
+    #p3{
+       display: none;
+    }
+    .content3{   
+        justify-content: center;
+        display: flex;
+        width:90%;
+    }
+    .format-marketing{
+        justify-content: center;
+        width: 100%;
+        display: flex;
+    }
+    .marketing{
+        justify-content: center;
+        display: flex;
+        width: 80%;
+    }
+    .side1{
+        flex-direction: column;
+    }
+    #p4{
+        width: 90%;
+    }
+    .content-emphasis{
+        width: 95%;
+    }
+    .format-image{
+        justify-content: center;
+        display: flex;
+        width:100%;
+    }
+    #img-citacao{
+        width: 35%;
+        height: 60%;
+    }
+    footer{
+       justify-content: right;
+       margin-top: 50px;
+        display: grid;
+        width: 10%;
+       
+    }
+    #title-footer{
+        margin-right: 180px;
+    }
+    #cont1-footer{
+        margin-top: 30px;
+        width: 70%;
+    }
+}

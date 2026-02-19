@@ -1,0 +1,205 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Special+Elite&display=swap');
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* formatação e estilização dos lados 1 e 2  */
+.style-column{
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+/* formatação e estilização concentrada do lado 1  */
+.style-side1{
+    background-color:#e6f5f7;
+    justify-content: center;
+    color: black;
+    display: grid;
+    width: 100%;
+}
+/* formatalização da saudação */
+.format-title{
+    .gfs-didot-regular {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 5%;
+    height: 0.5vh;
+    margin: 7%;
+    width: 90%;
+}
+#logo-title{
+    justify-content: center;
+    align-items: center;
+    margin-left: 38vh; 
+    margin-top: 4%;
+    display: grid;
+    height: 30vh;
+    width:35%;
+}
+/* formatação e estilização da borda ao redor do conteudo (chamativo) */
+.border1{
+    justify-content: center;
+    border-radius: 15px;
+    margin-bottom: 10%;
+    margin-left: 21%; 
+    display: flex;
+    width: 60%;
+
+}
+/* formatação e estilização do conteudo chamativo */
+#chamativo{
+    .gfs-didot-regular {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    justify-content: center;
+    margin-bottom: 60px;
+    text-align:justify;
+    margin-top: 60px;
+    font-size: 35px;
+    display: flex;
+    width: 130%;
+}
+/* formatação e estilização concentrada do lado 2  */
+.style-side2{
+    width: 100%;
+}
+/* formatação dos forms */
+.format-forms{
+    /* OVERFLOW - controla oque acontece quando o coentudo de um elemento é maior do que o espaço disponivel */
+    /* OVERFLOW HIDDEN oculta qualquer conteudo que exceda os limeites do conteiner,fazendo com que o conteudo extra nao seja visivel */
+    overflow: hidden;
+    width: 100%;
+}
+/* formatação do primeiro formulario  */
+.form1{
+    /* define o tempo de transição */
+    /* transition: transform 0.5s ease; - com duração de 5 segundos ease suaviza o inicio e o fim do movimento */
+    transition: transform 0.5s ease;
+    display: flex;
+    width: 200%;
+}
+.top-form{
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    margin-top: 5%;
+    display: flex;
+}
+.border2{
+    font-family: Arial, Helvetica, sans-serif;
+
+    justify-content: center;
+    border-radius: 15px;
+    margin-right: 220px;
+    margin-left: 190px;
+    margin-top: 2%;
+    display: flex;
+    height:35vw;
+    width: 60%;
+}
+.form-section {
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: grid;
+    height: 45vh;
+    width: 100%;
+}
+.form-section h1{
+    margin-bottom: 30px;
+    text-align: center;
+}
+label{
+    margin-bottom:5px;
+}
+input{
+    background-color: white;
+    border: solid #27a0b0;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    height: 3vh;
+    width: 93%;
+}
+
+.senha-container {
+    align-items: center;
+    position: relative;
+    max-width: 220%;
+    display: flex;
+}
+  #senha {
+    width: 20vw;
+  }
+.toggle-senha {
+    margin-bottom: 8.5%;
+    position: absolute;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    border: none;
+    right: 10px;
+
+}
+
+.button{
+    background-color: white;
+    border: solid #27a0b0;
+    justify-content: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 25px;
+    width: 100%;
+}
+.button:hover{
+    background-color:#9C27B0;
+    transition: 0.8s;
+    color: white;
+}
+.page-login{
+    justify-content: center;
+    margin-left: 5%;
+    font-size: 20px;
+    display: flex;
+}
+
+#tiver-conta{
+    justify-content: center;
+    margin-right: 1%;
+    margin-top: 20px;
+}
+a{
+    color: rgb(0, 17, 250);
+    justify-content: center;
+    text-decoration: none;
+    margin-right: 25%;
+    list-style: none;
+    margin-top: 20px;
+}
+a:hover{
+    transition: 0.3s;
+    color: #9C27B0;
+}
+@media(max-width:768px){
+    .style-column{
+        flex-direction: column;
+    }
+    #logo-title{
+        margin-left: 30%;
+        height: 100%;
+    }
+    
+
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link rel="icon" href="IMG/iconesolvet.png">
+     <link rel="stylesheet"  href="css/cadaster.css">
+    <title>Cadaster account</title>
+</head>
+    <body>
+        <div class="style-column">
+            <div class="style-side1">
+                <!-- Saudação -->
+                <div class="format-title">
+                    <h1>Olá! Bem-vindo à SOLVET+</h1>
+                </div> 
+
+                <img id="logo-title" src="IMG/iconesolvet.png">
+        
+                <div class="border1">
+                    <!-- Conteudo chamativo -->
+                    <p id="chamativo">
+                        Junte-se à nossa comunidade e descubra como simplificar
+                        seus desafios com as melhores soluções do mercado. Na 
+                        SOLVET+, estamos prontos para resolver com você!
+                    </p>
+                </div>
+            </div>
+
+            <form action="script/cadaster.php" method="post" class="format-forms" id="form">
+                <h1 class="top-form">FAÇA SEU CADASTRO</h1>
+            <div class="form1" id="formSlide">
+                <!-- Primeira Parte do Formulário -->
+                <div class="border2">
+                    <div class="form-section">
+                        <h1>Informações da Empresa</h1>
+                        <label for="nome_empresa">Nome da empresa:</label>
+                        <input type="text" name="nome_empresa" >
+                        <label for="cargo">Seu cargo:</label>
+                        <input type="text" name="cargo" >
+                        <label for="nivel_tecnico">Nivel Tecnico:</label>
+                            <input type="text" name="nivel_tecnico" >
+                        <button class="button" type="button" onclick="nextForm()">Próximo</button>
+                    </div>
+                </div>
+                
+                <div class="border2">
+                    <!-- Segunda Parte do Formulário -->
+                    <div class="form-section">
+                        <h1>Informações Pessoais</h1>
+                        <label for="nome">Seu Nome:</label>
+                            <input type="text" name="nome" id="nome" required>
+                        <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required>
+
+
+                        <label for="senha">Senha:</label>
+                            <div class="senha-container">
+                                <input type="password" name="senha" id="senha">
+                                <button type="button" class="toggle-senha" onclick="mostrarSenha()">👀</button>
+                            </div>
+
+                            <button class="button" id="env" type="submit">Enviar</button>
+                            <button class="button" id="ant" type="button" onclick="previousForm()">Voltar</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="page-login">
+                        <p id="tiver-conta">Já possui uma conta?</p>
+                        <a href="login.html">Login</a>
+                    </div> 
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+
+        <script>
+                // Controla o indice da seção atual do formulario começando em 0 que é o primeiro form
+                let currentSlide = 0;
+                // função chamada para quando o usuario clica no botão para ir para a proxima seção
+                function nextForm() {
+                    //document.getElementById("formSlide") esta linha captura o elemento HTML que contem os slides (as seções do formulario)
+                    const formSlide = document.getElementById("formSlide");
+                    // ADD 1 ao indice mudando de formulario
+                    currentSlide += 1;
+                    // desliza o conteiner de acordo com o atributo chamado no caso TRANSLATEx - move o conteiner horizontalmente
+                    formSlide.style.transform = `translateX(-${currentSlide * 50}%)`;
+                    //-${currentSlide * 50}% calcula a quantidade de deslocamento com base no indice atual
+                    // cada slide é movido em incrementos de 50% (metade da largura do conteiner) deslizando para a proxima seção
+
+            
+                }
+
+                // essa função é usada para quando o usuario clica no botão anterior
+                function previousForm() {
+                    const formSlide = document.getElementById("formSlide");
+                    // decrementa o indice para voltar ao slide anterior
+                    // subtrai -=1 do indice 
+                    currentSlide -= 1;
+                    formSlide.style.transform = `translateX(-${currentSlide * 50}%)`;
+                }
+            </script>
+
+           <script>
+                function mostrarSenha() {
+                    const campoSenha = document.getElementById("senha");
+                    campoSenha.type = campoSenha.type === "password" ? "text" : "password";
+                 }
+            </script>
+    </body>
+</html>

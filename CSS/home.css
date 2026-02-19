@@ -1,0 +1,359 @@
+/* -> Início */
+
+/* Essas foram as propriedades para ajustar a navbar: */
+
+.navbar {
+    width: 150%; /* Seu tamanho abrange 150% o tornando mais responsivo. */
+    justify-content: space-between; /* Mantém uma distancia igual entre os elementos. */
+    display: flex; /* Para ajudar no controle do layout, tornando-o flexível. */
+
+}
+
+/* Aqui etão as propriedades da navbar-brand:  */
+
+.navbar-brand {
+    margin-left: 90px; /* Move totalmente os elementos da navbar da esquerda para a direita em 90px. */
+    margin-right: 90px; /* Move totalmente os elementos da navbar da direita para a esquerda em 90px. */
+    position: fixed; /* Essa propriedadeé fundamental para fixar a navbar e ela acompanhar o usuário conforme ele rola a página.*/
+}
+
+/* Essas são as propriedades para criarmos o nosso body: */
+
+body {
+  overflow-y: scroll; /* Ajuda a colocar uma barra de rolagem lateral. */
+  max-height: 100vh; /* Ajuda a deixar o efeito sutíl da cor ciano um pouco mais forte. */
+  font-family: Arial, sans-serif; /* Ajuda a colocar uma fonte para todos os elementos do body. */
+  background: radial-gradient(circle, rgb(168, 238, 255) 30%, transparent 100%); /* Serve para embelezar mais o nosso layout, proporcionando um efeito gradiente em formato de círculo. */
+  list-style: none; /* controla o estilo das listas, tanto "ul" como "ol". Aqui no caso eu tirei(none). */
+  justify-content: space-between; /* Mantém uma distancia igual entre os elementos. */
+
+
+}
+
+/* Essas são as propriedades utilizadas na ul(lista desordenada): */
+
+.ul {
+    width: 100%; /* Utilizado para ajustar o tamanho da ul na navbar. */
+    display: flex; /* Para ajudar no controle do layout, tornando-o flexível. */
+    justify-content: space-between; /* Mantém uma distancia igual entre os elementos. */
+
+}
+
+/* Essas são as propriedades utilizadas na li(lista de itens): */
+
+.li {
+    cursor: pointer; /* Altera a aprência(mãozinha) do mouse ao passa-lo por cima da lista da navbar. */
+}
+
+/* Essas são as propriedades utilizadas no container: */
+
+.container {
+    display: flex; /* Para ajudar no controle do layout, tornando-o flexível. */
+    justify-content: space-between; /* Mantém uma distancia igual entre os elementos. */
+    gap: 20px; /* Define o espaçamento entre linhas e colunas em layouts de grade (grid). */
+    padding: 20px; /* Ajuda no espaçamento dos elementos da borda. */
+    max-width: 800px; /* Define a largura máxima que a div pode ter. */
+    margin: 20px auto; /* Define a margem entre os elementos dentro da mesma div. */
+    background-color: #fff; /* Define a cor da caixa na cor branca. */
+    border-radius: 8px; /* Ajusta a curvatura da caixa da pergunta.*/
+    margin-top: 60px; /* Espaçamento entre uma div e outra. */
+}
+
+/* Essas são as propriedades utilizadas no h1: */
+
+h1 {
+  color: #000; /* Utilizado para dar a cor preta para o título. */
+}
+
+/* Essas são as propriedades que utilizamos para os posts da home: */
+
+.post {
+  background-color: #fff; /* Define a cor da caixa na cor branca. */
+  border: 1px solid #ddd; /* Define a cor da borda na cor cinza esbranquiçada e deixa ela sólida. */
+  border-radius: 8px; /* Ajusta a curvatura da caixa da pergunta.*/
+  margin-bottom: 1%; /* Altera o espaço entre a parte inferior de um elemento e o elemento que vem logo abaixo. */
+  padding: 15px; /* Ajuda no espaçamento dos elementos da borda. */
+  width: 100%; /* Define um tamanho máximo de 100%, ajudando na responsividade assim como a navbar */
+  margin-top: 10px; /* Espaçamento do topo em relção a outra div.  */
+  margin-left: 10px; /* Move totalmente os elementos da esquerda para a direita em 10px. */
+  margin-right: 10px; /* Move totalmente os elementos da direita para a esquerda em 10px. */
+  
+}
+
+/* Essas são as propriedades que usamos para o post-header: */
+
+.post-header {
+  display: flex; /* Para ajudar no controle do layout, tornando-o flexível. */
+  align-items: center; /* Alinhamento dos itens ao centro.  */
+  margin-bottom: 10px; /* Altera o espaço entre a parte inferior de um elemento e o elemento que vem logo abaixo. */
+}
+
+/* Essas são as propriedades da imagem do post-header: */
+
+.post-header img {
+  border-radius: 50%; /* Ajusta a curvatura da imagem. */
+  width: 40px; /* Define um tamanho máximo de 40%, ajudando na responsividade assim como a navbar e o post.*/
+  height: 40px; /* Define a altura da imagem em 40px */
+  margin-right: 10px; /* Move totalmente os elementos da direita para a esquerda em 10px. */
+}
+
+/* Essas são as propriedades para o post-header e o username: */
+
+.post-header .username {
+  font-weight: bold; /* Deixa em negrito o nome do usuário. */
+}
+
+/* Essas são as propriedades para o post-content: */
+
+.post-content {
+  margin-bottom: 10px; /* Altera o espaço entre a parte inferior de um elemento e o elemento que vem logo abaixo. */
+}
+
+/* Essas são as propriedades para o post-actions: */
+
+.post-actions {
+  display: flex; /* Para ajudar no controle do layout, tornando-o flexível. */
+  
+}
+
+/* Essas são as propriedades para o botão de curtir, comentar e compartilhar: */
+
+.post-actions button {
+  background: none; /* Aqui não se utiliza nenhum background. */
+  border: none; /* Colocamos nenhum tipo de borda. */
+  color: #6c63ff; /* Para deixar a a cor dos botões na cor azulada. */
+  font-size: 14px; /* Ajuste do tamanho da fonte para 14px. */
+  cursor: pointer; /* Altera a aprência(mãozinha) do mouse ao passa-lo por cima da lista da navbar. */
+}
+
+/* Essas são as propriedades para o hoover ao passar o mouse no botão de curtir, comentar e compartilhar: */
+
+.post-actions button:hover {
+  text-decoration: underline; /* Define a decoração como o underline embaixo da palavra ao passar o mouse.*/
+}
+
+/* Essas são as propriedades para o span: */
+
+span {
+  margin-left: 5px; /* Move totalmente os elementos da esquerda para a direita em 5px. */
+}
+
+/* Essas são as propriedades para a textiinput: */
+
+.textiinput {
+  font-family: Arial, sans-serif; /* Ajuda a colocar uma fonte para todos os elementos da textiinput. */
+  background-color: #fff; /* Define a cor padrão como branco */
+  display: flex; /* Para ajudar no controle do layout, tornando-o flexível. */
+  height: 50vh;/* Define a altura da imagem em 50vh */
+  box-shadow: 10px 10px 10px rgb(157, 158, 158); /* Define uma sombra acizentada atrás da área. */ 
+}
+.textiinput #titulo{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  height: 4vh;
+  width: 25%;
+}
+#titulo:focus{
+   border-color: #6c63ff;
+   outline: none;
+ 
+}
+.textiinput #categoria{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  height: 4vh;
+  width: 25%;
+}
+#categoria:focus{
+   border-color: #6c63ff;
+   outline: none;
+}
+
+/* Essas são as propriedades para o form-container: */
+
+.form-container {
+  background-color: #ffffff; /* Define uma cor padrão branca. */ 
+  border-radius: 8px; /* Define a curvatura da area do forms. */ 
+  padding: 20px; /* Espaçamento de 20px. */ 
+  box-shadow: 0 4px 8px rgba(20, 20, 20, 0.1); /* Define uma sombra preta atrás da área. */ 
+  width: 100%; /* Define o tamanho máximo que pode chegar em até 100%. */ 
+}
+
+/* Essas são as propriedades para a textarea-wrapper: */
+
+.textarea-wrapper {
+  margin-bottom: 20px; /* Altera o espaço entre a parte inferior de um elemento e o elemento que vem logo abaixo. */
+}
+
+/* Essas são as propriedades que utilizamos para o label: */
+
+label {
+  font-size: 16px; /* Altera o tamanho da fonte para 16px. */
+  color: #333; /* Altera a cor do título da caixa para compartilhar seus desafios para uma cor mais acizentada puxada para o preto. */
+  margin-bottom: 8px; /* Altera o espaço entre a parte inferior de um elemento e o elemento que vem logo abaixo. */
+  display: block; /* Para informar que aquele elemento irá ocupar o espaço de uma linha */
+}
+
+/* Essas são as propriedades que utilizamos para a textarea: */
+
+textarea {
+  width: 100%; /* Define o tamanho máximo que pode chegar em até 100%. */ 
+  height: 150px; /* Define a altura em 150px. */ 
+  padding: 12px; /* Espaçamento de 12px. */ 
+  font-size: 16px; /* Tamanho da fonte em 16px. */ 
+  border-radius: 8px; /* Curvatura da area de texto em 8px. */ 
+  border: 1px solid #ddd; /* Define uma borda em solida, e altera sua cor para uma cor mais acizentada. */ 
+  transition: border-color 0.3s ease; /* Efeito ao clicar no campo de texto.  */
+}
+
+/* Essas são as propriedades que utilizamos para o foco da textarea: */
+
+textarea:focus {
+  border-color: #6c63ff; /* Cor ao clicar na textarea. */
+  outline: none; /* Remove o contorno do campo de texto para conseguir mostrar a cor definida por nós.*/
+}
+
+/* Essas são as propriedades que utilizamos para o botão de envio da pergunta. */
+
+.submit-btn {
+  background-color: #6c63ff; /* Cor padrão do botão. */
+  color: #fff; /* Cor da fonte do botão. */
+  border: none; /* Retiramos a borda para ser algo mais profissional. */
+  padding: 12px 20px; /* Espaçamento do da lateral e da parte de cima do botão. */
+  border-radius: 8px; /* Define a curvatura da borda do botão. */
+  font-size: 16px; /* Define o tamanho da fonte do botão em 16px. */
+  cursor: pointer; /* Altera a aprência(mãozinha) do mouse ao passa-lo por cima da lista da navbar. */
+  transition: background-color 0.3s ease; /* Altera a a transição a passar o mouse por cima. Deixando sua animação mais devagar.*/
+}
+
+/* Essas são as propriedades que usamos para o hover do botão de envio: */
+
+.submit-btn:hover {
+  background-color: #433ebd; /* Define a cor ao passar o mouse, escurece o botão. */
+}
+.user-conteudo{
+  font-size: large;
+
+  word-wrap: break-word; /* Quebra palavras grandes */
+  white-space: pre-wrap; /* Mantém espaços e quebras de linha */
+}
+.desafio-desc{
+  font-size: 20px;
+  margin-left: 2%;
+
+
+  word-wrap: break-word; /* Quebra palavras grandes */
+  white-space: pre-wrap; /* Mantém espaços e quebras de linha */
+
+}
+
+.desafio_categ{
+  word-wrap: break-word; /* Quebra palavras grandes */
+  white-space: pre-wrap; /* Mantém espaços e quebras de linha */
+}
+
+.editar-apagar{
+  transition: background-color 0.3s ease;
+  background-color: #6c63ff; /* Cor padrão do botão. */
+  border-radius: 4px; /* Define a curvatura da borda do botão. */
+  font-size: 16px; /* Define o tamanho da fonte do botão em 16px. */
+  cursor: pointer; /* Altera a aprência(mãozinha) do mouse ao passa-lo por cima da lista da navbar. */
+  height: 3.5vh; /* Espaçamento do da lateral e da parte de cima do botão. */
+  color: #fff; /* Cor da fonte do botão. */
+  border: none; /* Retiramos a borda para ser algo mais profissional. */
+  width: 5%;
+}
+
+/* Parte de cima da home */
+
+/* Essas são as propriedades que usamos para o hero: */
+
+.hero {
+  display: flex; /* Para ajudar no controle do layout, tornando-o flexível. */
+  justify-content: space-between; /* Mantém uma distancia igual entre os elementos. */
+  align-items: center; /* Mantém os elementos alinhados ao centro. */
+  height: calc(100vh - 60px); /* Altura da viewport menos o header, a altura do elemento será 100% da altura da janela de visualização do navegador, menos 60 pixels.*/
+  /* sempre terá a altura total da tela, subtraindo o espaço ocupado pelo cabeçalho de 60px, garantindo que ele preencha o espaço restante perfeitamente. */
+  padding: 50px; /* Espaçamento de 50px. */
+}
+
+/* Essas são as propriedades que usamos para o hero-left: */
+
+.hero-left {
+  max-width: 50%; /* Define o tamanho máimo para 50% em relação a tela.*/
+  margin-left: 100px; /* Move totalmente os elementos da esquerda para a direita em 100px. */
+  margin-top: 100px; /* Altera a relação do topo da div. */
+}
+
+/* Essas são as propriedades que usamos para a tagline: */
+
+.tagline {
+  color: #f604f8; /* Definimos uma cor roda */
+  font-size: 0.8em; /* Definimos um tamaho da fonte na unidade(em) que foi a que melhor se adaptou. */
+  margin-bottom: 10px; /* Altera o espaço entre a parte inferior de um elemento e o elemento que vem logo abaixo. */
+}
+
+/* Essas são as propriedades que usamos para o hero-title: */
+
+.hero-title {
+  font-size: 3em; /* Definimos um tamaho da fonte na unidade(em) que foi a que melhor se adaptou. */
+  font-weight: bold; /* A espessura dos caracteres colocamos em negrito para um melhor destaque. */
+  margin-bottom: 20px; /* Altera o espaço entre a parte inferior de um elemento e o elemento que vem logo abaixo. */
+  line-height: 1.2; /* Distância vertical entre linhas de texto em 1.2 */
+}
+
+/* Essas são as propriedades que usamos para o hero-subtitle: */
+
+.hero-subtitle {
+  color: black; /* Colocamos a cor preta */
+  line-height: 1.6; /* Distância vertical entre linhas de texto em 1.2 */
+  margin-bottom: 30px; /* Altera o espaço entre a parte inferior de um elemento e o elemento que vem logo abaixo. */
+}
+
+/* Essas são as propriedades que usamos para o hero-buttons a: */
+
+.hero-buttons a {
+  display: inline-block; /* Ajuda a definir a altura e largura ao mesmo tempo. */
+  padding: 15px 30px; /* Ajuda a definir o espaçamento. */
+  text-decoration: none;  /* Remove a decoração. */
+  border-radius: 5px;  /* Deixa a borda curva. */
+  font-weight: bold; /* A espessura dos caracteres colocamos em negrito para um melhor destaque. */
+}
+
+/* Essas são as propriedades que usamos para o hero-right: */
+
+.hero-right {
+  max-width: 40%; /* Define o tamanho da img em 40% */
+  text-align: right; /* Alinhamento para a direita. */
+  
+  /* Placeholder para a imagem*/
+  font-size: 2em; /* Tamanho em 2em. */
+  color: #555; /* Cor definida em cinza. */
+}
+
+/* Essas são as propriedades que usamos para o hero-right span: */
+
+.hero-right span {
+  color: #a855f7; /* Definimos uma cor roxeada. */
+
+}
+
+/* Estilos adicionais para simular o efeito sutil do fundo da página: */
+
+.hero::before {
+  position: relative; /* Coloca a logo da empresa na parte direita da pagina. */
+  height: 100%; /* Coloca a altura em 100%. */
+  pointer-events: none; /* Permite controlar se um elemento pode ser alvo de eventos de mouse, como clicar, passar o mouse e arrastar. Está desativada.*/
+  margin-left: 100px; /* Move totalmente os elementos da esquerda para a direita em 100px. */
+}
+
+/* Estilos adicionais para a posição da logo da empresa Solvet+ a direita: */
+
+.hero-right-object {
+  position: relative; /* Posiciona a logo da empresa na direita. */
+  margin-top: 100px;  /* Altera a relação do topo, no caso a navbar. */
+}
+
+/* -> fim. */
