@@ -4,30 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="css/login.css">
-    <!-- <style>
-        .senha-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    max-width: 300px;
-  }
-
-  #senha {
-    width: 100%;
-    padding-right: 40px; /* espaço para o botão */
-  }
-
-  .toggle-senha {
-    position: absolute;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    color: #ffffff;
-  }
-    </style> -->
+    <link rel="stylesheet" href="../CSS/login.css">
     <title>Cadastro</title>
 </head>
 
@@ -35,9 +12,9 @@
         <div class="border">
             <div class="format-form">
                 <div class="style-form">
-                    <img id="logo" src="IMG/logo_semfundo_cfb.png">
+                    <img id="logo" src="../IMG/logo_semfundo_cfb.png">
                         <h1 id="title">Faça seu login</h1>
-                    <form action="script/valida_login.php" method="post" id="form">
+                    <form action="../controllers/valida_login.php" method="post" id="form">
                         <label for="email">EMAIL:</label>
                             <input type="email" name="email" id="email">
                         <label for="senha">SENHA:</label>
@@ -57,7 +34,7 @@
             </div>
         </div>
         
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
 
        <script>
             function mostrarSenha() {

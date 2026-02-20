@@ -1,5 +1,5 @@
 <?php 
-    require_once "dbsolvet.php";
+    require_once "../config/dbsolvet.php";
     session_start();
 
     if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])){
@@ -26,8 +26,7 @@
             $stmt->bind_param("ssssss", $nome, $email, $senhaHash, $nome_empresa, $cargo, $nivel_tecnico);
             if($stmt->execute()){
                 echo "Usuario Registrado com sucesso!";
-                // echo "<script>alert('Usuario Registrado!')</script>";
-                header("Location: ../login.html");
+                header("Location: ../views/login.html");
             }else {
                 echo "Erro ao registrar: " . $stmt->error;
                 exit;

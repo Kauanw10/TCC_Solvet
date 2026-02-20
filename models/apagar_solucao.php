@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../../dbsolvet.php";
+require_once "../config/dbsolvet.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $id = $_POST['id'];
@@ -11,6 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->close();
 }
 
-header("Location: ../home.php");
+header("Location: ../views/home.php");
 exit;
 ?>

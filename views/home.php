@@ -1,7 +1,7 @@
 <?php 
     session_start();
     if (!isset($_SESSION['user_id'])) {
-        header("Location: ../../login.html");
+        header("Location: login.html");
         exit;
     }
 ?>
@@ -11,8 +11,8 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/home.css">  
-    <link rel="shortcut icon" type="imagex/png" href="../../IMG/iconesolvet.png">
+    <link rel="stylesheet" href="../css/home.css">  
+    <link rel="shortcut icon" type="imagex/png" href="../IMG/iconesolvet.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="home.php">
-              <img src="../../img/iconesolvet.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+              <img src="../IMG/iconesolvet.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
               Solvet+
             </a>
           </div>
@@ -63,7 +63,7 @@
         </div>
         <div class="hero-right">
             <div class="hero-right-object">
-                <img src="../../img/iconesolvet.png" style="max-width: 100%;">
+                <img src="../IMG/iconesolvet.png" style="max-width: 100%;">
             </div>
         </div>
         
@@ -80,7 +80,7 @@
              
           <div class="textiinput">
               <div class="form-container">
-                <form id="form-desafio" action="include/novo_desafio.php" method="post">
+                <form id="form-desafio" action="../models/novo_desafio.php" method="post">
                     <div class="textarea-wrapper">
                         <label for="conteudo">Compartilhe seus desafios:</label>
                         <br>
@@ -99,7 +99,7 @@
       </div>
 
         <?php 
-        require_once "../dbsolvet.php"; 
+        require_once "../config/dbsolvet.php"; 
          $sql = "SELECT desafios.id, desafios.usuario_id, desafios.titulo, desafios.descricao, desafios.categoria, desafios.criado_em, usuarios.nome FROM desafios JOIN usuarios ON desafios.usuario_id = usuarios.id ORDER BY desafios.criado_em DESC";
 
           $resultado = $conexao->query($sql); 
@@ -143,12 +143,12 @@
     <p class="desafio-desc"><?= nl2br(htmlspecialchars($post['descricao'])) ?></p> 
     </div>
     <?php if ($post['usuario_id'] == $_SESSION['user_id']): ?>
-    <form action="include/editar_desafio.php" method="get" style="display:inline;">
+    <form action="../models/editar_desafio.php" method="get" style="display:inline;">
         <input type="hidden" name="id" value="<?= $desafio_id ?>">
         <button class="editar-apagar" type="submit">Editar</button>
     </form>
     
-    <form action="include/apagar_desafio.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja apagar esta postagem?');">
+    <form action="../models/apagar_desafio.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja apagar esta postagem?');">
         <input type="hidden" name="id" value="<?= $desafio_id ?>">
         <button class="editar-apagar" type="submit">Apagar</button>
     </form>
@@ -181,12 +181,12 @@
                   <small>Solucionado em: <?= date("d/m/Y H:i", strtotime($solucao['enviado_em'])) ?></small>
 
                 <?php if ($solucao['usuario_id'] == $_SESSION['user_id']): ?>
-                <form action="include/editar_solucao.php" method="get" style="display:inline;">
+                <form action="../models/editar_solucao.php" method="get" style="display:inline;">
                     <input type="hidden" name="id" value="<?= $solucao['id'] ?>">
                     <button type="submit" class="submit-btn">Editar</button>
                 </form>
 
-                <form action="include/apagar_solucao.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja apagar este comentário?');">
+                <form action="../models/apagar_solucao.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja apagar este comentário?');">
                     <input type="hidden" name="id" value="<?= $solucao['id'] ?>">
                     <button type="submit" class="submit-btn">Apagar</button>
                 </form>
@@ -200,7 +200,7 @@
     $stmt->close(); 
     ?>
                  <!-- Formulário de nova solução -->
-                <form id="form-solucao" action="include/nova_solucao.php" method="post" style="margin-left: 20px; margin-top: 10px;">
+                <form id="form-solucao" action="../models/nova_solucao.php" method="post" style="margin-left: 20px; margin-top: 10px;">
                     <input type="hidden" name="desafio_id" value="<?= $desafio_id ?>">
                     <textarea name="solucao" rows="2" cols="50" required placeholder="Digite sua solução aqui..."></textarea>
                     <br><br>
@@ -252,7 +252,7 @@ document.querySelectorAll('.form-curtir').forEach(form => {
         e.preventDefault();
         const id = form.dataset.id;
 
-        const res = await fetch('include/processa_like.php', {
+        const res = await fetch('../models/processa_like.php', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             body: 'desafio_id=' + encodeURIComponent(id)
@@ -282,7 +282,7 @@ window.addEventListener('load', function () {
 document.getElementById("form-desafio").addEventListener("submit", function(e) {
     e.preventDefault();
     const formData = new FormData(this);
-    fetch("include/novo_desafio.php", {
+    fetch("../models/novo_desafio.php", {
         method: "POST",
         body: formData
     })
@@ -299,7 +299,7 @@ document.querySelectorAll("#form-solucao").forEach(form => {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         const formData = new FormData(form);
-        fetch("include/nova_solucao.php", {
+        fetch("../models/nova_solucao.php", {
             method: "POST",
             body: formData
         }).then(res => res.text())

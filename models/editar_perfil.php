@@ -1,11 +1,11 @@
 <?php 
     session_start();
     if (!isset($_SESSION['user_id'])) {
-        header("Location: ../../../login.html");
+        header("Location: ../views/login.html");
         exit;
     }
 
-    require_once "../../dbsolvet.php";
+    require_once "../config/dbsolvet.php";
 
     if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
@@ -45,7 +45,7 @@
             $_SESSION['user_cargo'] = $cargo;
             $_SESSION['user_biografia'] = $biografia;
 
-            header("Location: ../perfil.php?atualizado=1");
+            header("Location: ../views/perfil.php?atualizado=1");
             exit;
             } else {
             echo "Erro ao atualizar: " . $stmt->error;

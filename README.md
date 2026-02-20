@@ -1,5 +1,5 @@
 # Solvet+
-
+// SOBRE O MVC... Finalizar ainda...
 ## 📌 Sobre o Projeto
 Este Trabalho de Conclusão de Curso apresenta a Solvet+ realizado em 2025, uma plataforma de crowdsourcing voltada para a resolução colaborativa de problemas empresariais.
 
@@ -40,13 +40,7 @@ Conectar pequenas empresas e empreendedores que enfrentam desafios em sua rotina
 - Organização de código para escalabilidade
 - Planejamento de evolução futura com MVC e AJAX
 
-## 🗄️ Modelagem de Banco
-Imagem ou explicação das tabelas.
-
 ## 🚀 Como Rodar
 1. Clone o repositório (TCC_Solvet)
 2. Configure o banco (tcc_solvetdb)
 3. Rode o servidor local (localhost)
-
-## 📷 Demonstração
-Prints ou GIF do sistema funcionando.

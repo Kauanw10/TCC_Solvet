@@ -1,5 +1,5 @@
 <?php 
-    require_once 'dbsolvet.php';
+    require_once '../config/dbsolvet.php';
     session_start();
 
     if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['email']) && !empty($_POST['senha'])){
@@ -35,7 +35,7 @@
                 $_SESSION['user_cargo'] = $user['cargo'];
                 $_SESSION['user_nivel_tecnico'] = $user['nivel_tecnico'];
               
-                header("Location: pages/home.php");
+                header("Location: ../views/home.php");
                 exit;
 
             }else{

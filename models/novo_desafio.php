@@ -1,8 +1,8 @@
 <?php 
     session_start();
-    require_once "../../dbsolvet.php";
+    require_once "../config/dbsolvet.php";
     if (!isset($_SESSION['user_id'])) {
-        header("Location: ../../../login.html");
+        header("Location: ../views/login.html");
         exit;
     }
 
@@ -13,7 +13,7 @@
 
         if (empty($conteudo)) { 
         // Conteúdo vazio não deve ser inserido 
-        header("Location: ../home.php"); 
+        header("Location: ../views/home.php"); 
         exit;
         }
 
@@ -22,7 +22,7 @@
         $stmt->bind_param("isss", $usuario_id, $titulo, $conteudo, $categoria); 
         if ($stmt->execute()) { 
            $novo_id = $stmt->insert_id;
-           header("Location: ../home.php#desafio-$novo_id");
+           header("Location: ../views/home.php#desafio-$novo_id");
             exit;
         } else { 
             echo "Erro ao salvar postagem: " . $stmt->error; 

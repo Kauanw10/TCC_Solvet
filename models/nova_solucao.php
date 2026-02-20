@@ -1,8 +1,8 @@
 <?php 
     session_start();
-    require_once "../../dbsolvet.php";
+    require_once "../config/dbsolvet.php";
     if (!isset($_SESSION['user_id'])) {
-        header("Location: ../../../login.html");
+        header("Location: ../views/login.html");
         exit;
     }
 
@@ -21,6 +21,6 @@
         $stmt->close(); 
        }
     }
-     header("Location: ../home.php"); 
+     header("Location: ../views/home.php"); 
         exit; 
 ?>

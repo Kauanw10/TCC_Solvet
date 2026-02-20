@@ -1,11 +1,11 @@
 <?php 
     session_start();
     if (!isset($_SESSION['user_id'])) {
-        header("Location: ../../login.html");
+        header("Location: login.html");
         exit;
     }
 
-    require_once "../dbsolvet.php";
+    require_once "../config/dbsolvet.php";
 
     if (isset($_GET['atualizado']) && $_GET['atualizado'] == 1) {
     echo "<script>alert('Perfil atualizado com sucesso!');</script>";
@@ -24,8 +24,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/perfil.css">
-    <link rel="shortcut icon" type="imagex/png" href="../../IMG/iconesolvet.png">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="shortcut icon" type="imagex/png" href="../IMG/iconesolvet.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    
@@ -35,8 +35,8 @@
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../html/home.html">
-              <img src="../../img/iconesolvet.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="home.php">
+              <img src="../IMG/iconesolvet.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
               Solvet+
             </a>
           </div>
@@ -70,7 +70,7 @@
 
  
 
-      <form class="profile-info-fields" action="include/editar_perfil.php" method="post">
+      <form class="profile-info-fields" action="../models/editar_perfil.php" method="post">
           <div class="forms">
                   <label for="name">Nome</label>
                   <input type="text" name="nome" value="<?=$linha['nome']?>" placeholder="Digite aqui seu nome...">
