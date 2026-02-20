@@ -1,5 +1,4 @@
 # Solvet+
-// SOBRE O MVC... Finalizar ainda...
 ## 📌 Sobre o Projeto
 Este Trabalho de Conclusão de Curso apresenta a Solvet+ realizado em 2025, uma plataforma de crowdsourcing voltada para a resolução colaborativa de problemas empresariais.
 
